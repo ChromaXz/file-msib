@@ -1,0 +1,39 @@
+<script>
+    //variabel
+    let pelanggan = "Dewa";
+    let produk = "AC";
+
+    //tv => 3 jt, kulkas => 4 jt, AC => 5 juta
+    //if(produk == "TV"){
+        //hargasatuan = 3000000;
+    //}
+    //else if(produk == "Kulkas"){
+       // hargasatuan = 4000000;
+    //}
+    //else if(produk == "AC"){
+        //hargasatuan = 5000000;
+    //}
+    //else{
+       // hargasatuan = 0;
+    //}
+    let hargasatuan = 0;
+    switch(produk){
+        case 'TV': hargasatuan = 3000000; break;
+        case 'Kulkas': hargasatuan = 4000000; break;
+        case 'AC': hargasatuan = 5000000; break;
+        default : hargasatuan = 0;
+    };
+    
+    let jumlahbeli = 15;
+    let bruto = hargasatuan * jumlahbeli;
+    //ternary
+    let diskon =(produk == "AC") ? 0.1 * bruto : 0;
+
+    //output
+    document.write("Data Pembelian" + 
+    "<br> Pelanggan : " + pelanggan + 
+    "<br> Produk Pilihan : " + produk + 
+    "<br> Harga Satuan : " + hargasatuan + 
+    "<br> Harga Kotor (Bruto) : " + bruto +
+    "<br> Diskon : " + diskon);
+</script>
